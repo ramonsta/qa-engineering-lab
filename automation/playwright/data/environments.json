@@ -1,0 +1,13 @@
+{
+  "dev": {
+    "baseUrl": "https://dev.example.com"
+  },
+
+  "qa": {
+    "baseUrl": "https://qa.example.com"
+  },
+
+  "prod": {
+    "baseUrl": "https://www.example.com"
+  }
+}

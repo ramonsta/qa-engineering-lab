@@ -1,13 +1,15 @@
+const { getTimestamp } = require('./date.util');
+
 function logInfo(message) {
-  console.log(`[INFO] ${message}`);
+  console.log(`[INFO] [${getTimestamp()}] ${message}`);
 }
 
 function logWarning(message) {
-  console.warn(`[WARNING] ${message}`);
+  console.warn(`[WARNING] [${getTimestamp()}] ${message}`);
 }
 
 function logError(message) {
-  console.error(`[ERROR] ${message}`);
+  console.error(`[ERROR] [${getTimestamp()}] ${message}`);
 }
 
 module.exports = {
