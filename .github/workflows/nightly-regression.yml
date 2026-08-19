@@ -44,4 +44,10 @@ jobs:
           name: nightly-report
           path: playwright-report/
           retention-days: 30
+          
+          on:
+
+  schedule:
+
+    - cron: '0 2 * * *'
 

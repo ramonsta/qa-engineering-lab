@@ -1,0 +1,12 @@
+userName: SEU_USER
+
+accessKey: SUA_KEY
+
+platforms:
+
+  - os: Windows
+    osVersion: 11
+    browserName: chrome
+    browserVersion: latest
+
+framework: playwright

@@ -1,16 +1,14 @@
 const { BasePage } = require('./BasePage');
-const urls = require('../data/urls.json');
 
 class GooglePage extends BasePage {
-
-  constructor(page) {
-    super(page);
-  }
-
   async open() {
-    await this.navigate(urls.google);
+    await this.navigate('/');
   }
 
+  async search(term) {
+    await this.page.locator('textarea[name="q"]').fill(term);
+    await this.page.keyboard.press('Enter');
+  }
 }
 
 module.exports = { GooglePage };
