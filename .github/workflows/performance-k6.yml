@@ -1,0 +1,19 @@
+name: k6 Performance Smoke Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'performance/**'
+      - '.github/workflows/performance-k6.yml'
+
+jobs:
+  k6-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run k6 smoke test
+        run: docker run --rm -v "$PWD:/work" -w /work grafana/k6:latest run performance/k6/smoke.js

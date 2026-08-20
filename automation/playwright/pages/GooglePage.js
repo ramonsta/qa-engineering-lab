@@ -2,7 +2,7 @@ const { BasePage } = require('./BasePage');
 
 class GooglePage extends BasePage {
   async open() {
-    await this.navigate('/');
+    await this.navigate('https://www.google.com/');
   }
 
   async search(term) {

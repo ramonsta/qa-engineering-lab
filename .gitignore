@@ -21,6 +21,7 @@ performance/reports/
 
 # Logs
 *.log
+log/
 logs/
 
 # Backups
@@ -38,3 +39,6 @@ Thumbs.db
 tmp/
 temp/
 .cache/
+
+# Local archives
+*.zip

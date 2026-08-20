@@ -5,11 +5,13 @@
   "type": "commonjs",
   "scripts": {
     "test": "playwright test",
+    "test:list": "playwright test --list",
     "test:headed": "playwright test --headed",
     "test:ui": "playwright test --ui",
     "test:report": "playwright show-report",
     "test:login": "playwright test automation/playwright/tests/login.spec.js",
-    "install:browsers": "playwright install"
+    "test:smoke": "playwright test --grep @smoke",
+    "install:browsers": "playwright install --with-deps chromium"
   },
   "dependencies": {
     "@faker-js/faker": "^10.5.0",
