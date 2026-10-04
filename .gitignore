@@ -42,3 +42,7 @@ temp/
 
 # Local archives
 *.zip
+
+# Generated API test artifacts
+/playwright-api-report/
+/test-results-api/
