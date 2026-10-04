@@ -11,7 +11,10 @@
     "test:report": "playwright show-report",
     "test:login": "playwright test automation/playwright/tests/login.spec.js",
     "test:smoke": "playwright test --grep @smoke",
-    "install:browsers": "playwright install --with-deps chromium"
+    "install:browsers": "playwright install --with-deps chromium",
+    "api:start": "node api/demo/server.cjs",
+    "test:api": "playwright test --config=playwright.api.config.cjs",
+    "test:api:report": "playwright show-report playwright-api-report"
   },
   "dependencies": {
     "@faker-js/faker": "^10.5.0",

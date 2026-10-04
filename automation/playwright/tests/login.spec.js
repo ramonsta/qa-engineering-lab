@@ -7,8 +7,13 @@ test('@smoke successful login', async ({ loginPage, page }) => {
   await loginPage.open();
 
   Logger.info('Submitting valid credentials');
-  await loginPage.login(users.admin.username, users.admin.password);
+  await loginPage.login(
+    users.validUser.username,
+    users.validUser.password
+  );
 
   await expect(page).toHaveURL(/logged-in-successfully/);
-  await expect(page.getByRole('heading', { name: /logged in successfully/i })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: /logged in successfully/i })
+  ).toBeVisible();
 });
