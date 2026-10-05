@@ -3,7 +3,9 @@
 Professional Quality Engineering laboratory focused on reliable test automation,
 continuous validation and observable test results.
 
-## Current capabilities
+feature/login
+
+main
 
 - Playwright end-to-end tests using Page Objects and fixtures
 - Desktop Chromium and mobile viewport projects
@@ -80,7 +82,8 @@ repository activity. Re-enable them from the Actions page when necessary.
 ## Roadmap
 
 - Implement Appium tests and emulator-ready CI
-- Add executable API contract tests
+- Expand API integration coverage and add contract tests
 - Add Allure reporting and quality metrics
 - Expand Docker support
-- Convert QEL CLI placeholders into production commands
+- Evaluate Selenium Grid for distributed browser execution
+- Convert QEL CLI placeholders into functional commands
