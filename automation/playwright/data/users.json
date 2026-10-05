@@ -1,6 +1,10 @@
-[
-  {
-    "username": "admin",
-    "password": "admin123"
+{
+  "validUser": {
+    "username": "student",
+    "password": "Password123"
+  },
+  "invalidUser": {
+    "username": "incorrectUser",
+    "password": "incorrectPassword"
   }
-]
+}

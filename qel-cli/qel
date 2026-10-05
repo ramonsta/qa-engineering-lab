@@ -1,0 +1,119 @@
+
+#!/usr/bin/env bash
+
+
+set -Eeuo pipefail
+
+
+BASE="$(cd "$(dirname "$0")" && pwd)"
+
+COMMAND="${1:-help}"
+
+
+
+case "$COMMAND" in
+
+
+init)
+bash "$BASE/commands/init.sh"
+;;
+
+
+doctor)
+bash "$BASE/commands/doctor.sh"
+;;
+
+
+verify)
+bash "$BASE/commands/verify.sh"
+;;
+
+
+realign)
+bash "$BASE/commands/realign.sh"
+;;
+
+
+clean)
+bash "$BASE/commands/clean.sh"
+;;
+
+
+backup)
+bash "$BASE/commands/backup.sh"
+;;
+
+
+restore)
+bash "$BASE/commands/restore.sh"
+;;
+
+
+report)
+bash "$BASE/commands/report.sh"
+;;
+
+
+pipeline)
+bash "$BASE/commands/pipeline.sh"
+;;
+
+
+docker)
+bash "$BASE/commands/docker.sh"
+;;
+
+
+playwright)
+bash "$BASE/commands/playwright.sh"
+;;
+
+
+api)
+bash "$BASE/commands/api.sh"
+;;
+
+
+mobile)
+bash "$BASE/commands/mobile.sh"
+;;
+
+
+performance)
+bash "$BASE/commands/performance.sh"
+;;
+
+
+plugins)
+bash "$BASE/commands/plugins.sh"
+;;
+
+
+*)
+
+echo
+echo "QEL CLI"
+echo
+echo "Available commands:"
+echo
+echo " init"
+echo " doctor"
+echo " verify"
+echo " realign"
+echo " clean"
+echo " backup"
+echo " restore"
+echo " report"
+echo " pipeline"
+echo " docker"
+echo " playwright"
+echo " api"
+echo " mobile"
+echo " performance"
+echo " plugins"
+echo
+
+;;
+
+esac
+

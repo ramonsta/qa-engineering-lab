@@ -2,26 +2,26 @@
   "name": "qa-engineering-lab",
   "version": "1.0.0",
   "description": "Professional Software Quality Engineering laboratory.",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ramonsta/qa-engineering-lab.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/ramonsta/qa-engineering-lab/issues"
+  "scripts": {
+    "test": "playwright test",
+    "test:list": "playwright test --list",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:login": "playwright test automation/playwright/tests/login.spec.js",
+    "test:smoke": "playwright test --grep @smoke",
+    "install:browsers": "playwright install --with-deps chromium",
+    "api:start": "node api/demo/server.cjs",
+    "test:api": "playwright test --config=playwright.api.config.cjs",
+    "test:api:report": "playwright show-report playwright-api-report"
   },
-  "homepage": "https://github.com/ramonsta/qa-engineering-lab#readme",
+  "dependencies": {
+    "@faker-js/faker": "^10.5.0",
+    "axios": "^1.18.1",
+    "dotenv": "^17.4.2"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.60.0"
+    "@playwright/test": "^1.61.1"
   }
 }

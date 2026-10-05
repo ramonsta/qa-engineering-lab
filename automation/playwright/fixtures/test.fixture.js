@@ -1,12 +1,10 @@
-const { test: base } = require('@playwright/test');
+const { test: base, expect } = require('@playwright/test');
+const { LoginPage } = require('../pages/LoginPage');
 
-exports.test = base.extend({
-
+const test = base.extend({
+  loginPage: async ({ page }, use) => {
+    await use(new LoginPage(page));
+  }
 });
-const { logInfo } = require('../utils/logger');
 
-logInfo('Opening Google page');
-
-const { getTimestamp } = require('../utils/date.util');
-
-console.log(getTimestamp());
+module.exports = { test, expect };

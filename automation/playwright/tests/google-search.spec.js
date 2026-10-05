@@ -1,14 +1,14 @@
 const { test, expect } = require('@playwright/test');
 const { GooglePage } = require('../pages/GooglePage');
 
-test('Google search page loads', async ({ page }) => {
+test('Search Playwright on Google', async ({ page }) => {
 
   const googlePage = new GooglePage(page);
 
   await googlePage.open();
 
-  const title = await googlePage.getTitle();
+  await googlePage.search('Playwright');
 
-  expect(title).toContain('Google');
+  await expect(page).toHaveTitle(/Playwright/i);
 
 });

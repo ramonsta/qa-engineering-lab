@@ -1,6 +1,48 @@
+# Dependencies
 node_modules/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Playwright
 playwright-report/
 test-results/
+blob-report/
+playwright/.cache/
+
+# Reports
+reports/
+allure-results/
+allure-report/
 coverage/
-dist/
-.env
+performance/reports/
+
+# Logs
+*.log
+log/
+logs/
+
+# Backups
+*.bak
+*.backup
+qel-cli/backups/
+
+# IDE and operating system
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+.cache/
+
+# Local archives
+*.zip
+
+# Generated API test artifacts
+/playwright-api-report/
+/test-results-api/
